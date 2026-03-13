@@ -1,0 +1,40 @@
+{
+    "categories": {
+        "yellow": {
+            "name": "Fruits",
+            "words": [
+                "apple",
+                "banana",
+                "orange",
+                "grape"
+            ]
+        },
+        "green": {
+            "name": "Colors",
+            "words": [
+                "red",
+                "blue",
+                "green",
+                "yellow"
+            ]
+        },
+        "blue": {
+            "name": "Animals",
+            "words": [
+                "dog",
+                "cat",
+                "bird",
+                "fish"
+            ]
+        },
+        "purple": {
+            "name": "Countries",
+            "words": [
+                "usa",
+                "canada",
+                "mexico",
+                "brazil"
+            ]
+        }
+    }
+}
