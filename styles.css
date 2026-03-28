@@ -1,3 +1,217 @@
+/* Results popup styles */
+#results-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.35);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+#results-popup-content {
+    background: #fff;
+    border-radius: 12px;
+    max-width: 350px;
+    width: 90vw;
+    margin: auto;
+    position: relative;
+    padding: 32px 18px 70px 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#close-results-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+#results-popup-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#results-popup-summary {
+    margin-bottom: 10px;
+    text-align: center;
+}
+#share-results-btn {
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 10px 24px;
+    font-size: 1em;
+    border-radius: 6px;
+    border: none;
+    background: #ffd600;
+    color: #222;
+    font-weight: bold;
+    cursor: pointer;
+}
+#view-results-btn {
+    margin-top: 10px;
+    padding: 10px 24px;
+    font-size: 1em;
+    border-radius: 6px;
+    border: none;
+    background: #e0e0e0;
+    color: #222;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Animation for moving words to solved row */
+.word.move-up {
+    animation: moveUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes moveUp {
+    0% { transform: scale(1) translateY(0); opacity: 1; }
+    60% { transform: scale(1.1) translateY(-30px); opacity: 1; }
+    100% { transform: scale(1) translateY(-60px); opacity: 0; }
+}
+
+/* Animation for solved category fade-in */
+.solved-category.animated {
+    animation: fadeInSolved 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeInSolved {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+#solved-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.solved-category.single-rect {
+    width: 100%;
+    max-width: 550px;
+    min-width: 320px;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    /* Color will be set by category class */
+}
+
+.solved-category-label {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px 14px 4px 14px;
+    background: transparent;
+    border-radius: 8px 8px 0 0;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.solved-category-words-line {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 4px 14px 12px 14px;
+    color: #222;
+    background: transparent;
+    border-radius: 0 0 8px 8px;
+    text-align: center;
+}
+
+/* Color coding for solved categories */
+.solved-category.yellow {
+    background: #fff3cd;
+    border-color: #ffeaa7;
+}
+.solved-category.green {
+    background: #d4edda;
+    border-color: #c3e6cb;
+}
+.solved-category.blue {
+    background: #cce5ff;
+    border-color: #99d6ff;
+}
+.solved-category.purple {
+    background: #e2e3f1;
+    border-color: #d1d3e0;
+}
+.solved-category.yellow .solved-category-label,
+.solved-category.yellow .solved-category-words-line {
+    color: #856404;
+}
+.solved-category.green .solved-category-label,
+.solved-category.green .solved-category-words-line {
+    color: #155724;
+}
+.solved-category.blue .solved-category-label,
+.solved-category.blue .solved-category-words-line {
+    color: #004085;
+}
+.solved-category.purple .solved-category-label,
+.solved-category.purple .solved-category-words-line {
+    color: #383d41;
+}
+/* Title bar styles */
+.pz-game-title-bar .pz-game-title {
+    font-family: "nyt-karnakcondensed";
+    font-size: 42px;
+    font-weight: 700;
+    font-weight: bold;
+    margin-right: 16px;
+}
+
+.pz-game-title-bar .pz-game-date {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.pz-game-title-bar {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.pz-module {
+  flex: 1 1 auto;
+  margin: 12px;
+}
+
+@media (max-width: 500px) {
+    #game-board {
+        max-width: 98vw;
+        min-width: 0;
+        gap: 6px;
+    }
+    .word {
+        padding: 10px 2px;
+        font-size: 14px;
+    }
+    .solved-category.single-rect {
+        max-width: 98vw;
+        min-width: 0;
+    }
+    .solved-category-label,
+    .solved-category-words-line {
+        font-size: 15px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+.pz-section {
+  margin-top: 24px;
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -10,11 +224,17 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    margin-top: 10px;
     margin-bottom: 20px;
+    max-width: 700px;
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .word {
-    padding: 10px;
+    padding: 25px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     cursor: pointer;
@@ -61,6 +281,13 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#mistakes {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 button {

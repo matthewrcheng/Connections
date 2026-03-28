@@ -7,16 +7,45 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Connections</h1>
-    <div id="game-board">
-        <!-- Words will be inserted here -->
+    <div class="pz-section">
+        <div class="pz-row pz-game-title-bar xwd__hide-when-no-data">
+            <div id="portal-game-header" class="pz-module">
+                <h1>
+                    <em class="pz-game-title">Connections</em>
+                    <span id="portal-game-date" class="pz-game-date"><span>April 4, 2026</span></span>
+                </h1>
+            </div>
+        </div>
+        <div id="solved-categories"></div>
+        <div id="game-board">
+            <!-- Words will be inserted here -->
+        </div>
+        <div id="mistakes">
+            Mistakes Remaining: <span id="mistake-count">0</span>/4
+        </div>
+        <div id="options" style="text-align:center; margin-bottom:10px;">
+            <label><input type="checkbox" id="infinite-mistakes"> Allow infinite mistakes</label>
+        </div>
+        <div id="controls">
+            <button id="shuffle-btn">Shuffle</button>
+            <button id="deselect-btn">Deselect All</button>
+            <button id="submit-btn" disabled>Submit</button>
+        </div>
+
+        <div id="view-results-container" style="text-align:center; margin-top:18px;">
+            <button id="view-results-btn" style="display:none;">View Results</button>
+        </div>
+
+        <div id="results-popup" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.35); z-index:1000; align-items:center; justify-content:center;">
+            <div id="results-popup-content" style="background:#fff; border-radius:12px; max-width:350px; width:90vw; margin:auto; position:relative; padding:32px 18px 70px 18px; box-shadow:0 4px 24px rgba(0,0,0,0.18);">
+                <button id="close-results-popup" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:1.5em; cursor:pointer;">✕</button>
+                <div id="results-popup-title" style="font-size:1.5em; font-weight:bold; text-align:center; margin-bottom:10px;"></div>
+                <div id="results-popup-summary"></div>
+                <button id="share-results-btn" style="display:block; margin:30px auto 0 auto; padding:10px 24px; font-size:1em; border-radius:6px; border:none; background:#ffd600; color:#222; font-weight:bold; cursor:pointer;">Share Your Results</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
     </div>
-    <div id="controls">
-        <button id="submit-btn" disabled>Submit</button>
-        <button id="shuffle-btn">Shuffle</button>
-        <div id="mistakes">Mistakes: <span id="mistake-count">0</span>/4</div>
-    </div>
-    <div id="message"></div>
-    <script src="script.js"></script>
 </body>
 </html>
