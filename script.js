@@ -85,10 +85,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initializeGame() {
     words = [];
-    Object.values(config.categories).forEach(cat => {
-        words.push(...cat.words);
-    });
-    shuffleArray(words);
+    if (config.startingOrder && config.startingOrder.length > 0) {
+        // Use the configured starting order
+        words = [...config.startingOrder];
+    } else {
+        // Fall back to collecting all words and shuffling
+        Object.values(config.categories).forEach(cat => {
+            words.push(...cat.words);
+        });
+        shuffleArray(words);
+    }
     correctCategories = [];
     mistakes = 0;
     selected = [];

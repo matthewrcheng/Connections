@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'KarnakCondensed';
+    src: url('./fonts/karnakcondensed-normal-700.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'FranklinNormal';
+    src: url('./fonts/franklin-normal-700.ttf') format('truetype');
+    font-weight: 700;
+}
+
+body {
+    font-family: 'FranklinNormal', sans-serif;
+}
+
 /* Results popup styles */
 #results-popup {
     display: none;
@@ -98,7 +114,7 @@
     min-width: 320px;
     margin: 0 auto;
     border: 2px solid #ccc;
-    border-radius: 8px;
+    border-radius: 6px;
     box-sizing: border-box;
     padding: 0;
     display: flex;
@@ -113,7 +129,7 @@
     font-weight: bold;
     padding: 12px 14px 4px 14px;
     background: transparent;
-    border-radius: 8px 8px 0 0;
+    border-radius: 6px 6px 0 0;
     letter-spacing: 0.5px;
     text-align: center;
 }
@@ -124,7 +140,7 @@
     padding: 4px 14px 12px 14px;
     color: #222;
     background: transparent;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 6px 6px;
     text-align: center;
 }
 
@@ -163,10 +179,11 @@
 }
 /* Title bar styles */
 .pz-game-title-bar .pz-game-title {
-    font-family: "nyt-karnakcondensed";
+    font-family: 'KarnakCondensed', sans-serif;
     font-size: 42px;
     font-weight: 700;
     font-weight: bold;
+    font-style: normal;
     margin-right: 16px;
 }
 
@@ -213,7 +230,6 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -240,6 +256,7 @@ body {
     cursor: pointer;
     text-align: center;
     user-select: none;
+    border-radius: 6px;
 }
 
 .word.selected {

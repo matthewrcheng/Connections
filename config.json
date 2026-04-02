@@ -1,39 +1,57 @@
 {
+    "startingOrder": [
+        "WILL",
+        "YOU",
+        "MARRY",
+        "ME",
+        "HAT",
+        "DAISY",
+        "&",
+        "YUM",
+        "WET",
+        "TABLE",
+        "ELLE",
+        "POPPY",
+        "BEE",
+        "THE",
+        "E",
+        "CHAIR"
+    ],
     "categories": {
         "yellow": {
-            "name": "Fruits",
+            "name": "THE CATS!",
             "words": [
-                "apple",
-                "banana",
-                "orange",
-                "grape"
+                "TABLE",
+                "CHAIR",
+                "POPPY",
+                "DAISY"
             ]
         },
         "green": {
-            "name": "Colors",
+            "name": "ROLL TRIBE",
             "words": [
-                "red",
-                "blue",
-                "green",
-                "yellow"
+                "WILL",
+                "YUM",
+                "&",
+                "MARRY"
             ]
         },
         "blue": {
-            "name": "Animals",
+            "name": "OUR FAVORITE COLOR (BLUE)",
             "words": [
-                "dog",
-                "cat",
-                "bird",
-                "fish"
+                "BEE",
+                "ELLE",
+                "YOU",
+                "E"
             ]
         },
         "purple": {
-            "name": "Countries",
+            "name": "SPELLED WITH \"MATTHEW\"",
             "words": [
-                "usa",
-                "canada",
-                "mexico",
-                "brazil"
+                "ME",
+                "THE",
+                "HAT",
+                "WET"
             ]
         }
     }
